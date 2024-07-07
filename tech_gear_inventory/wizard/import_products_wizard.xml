@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View import_products_wizard form -->
+    <record id="view_import_products_wizard_form" model="ir.ui.view">
+        <field name="name">view.import_products_wizard.form</field>
+        <field name="model">import_products_wizard</field>
+        <field name="arch" type="xml">
+            <form string="Add excel file with products data to import">
+                <group>
+                    <field name="file" filename="file_name"/>
+                </group>
+                <footer>
+                    <button name="import_products" type="object" string="Import Products" class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action import_products_wizard -->
+    <record id="action_import_products_wizard" model="ir.actions.act_window">
+        <field name="name">Import products wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">import_products_wizard</field>
+        <field name="view_mode">form</field>
+        <field name="binding_model_id" ref="model_product_template"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="import_wizard_menu"
+        name="Import Wizard"
+        action="action_import_products_wizard"
+        parent="stock.menu_stock_inventory_control"
+        sequence="110"/>
+
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_group_stock_user_group_name,group_stock_user.group_name,model_tech_gear_product_category,stock.group_stock_user,1,1,1,1
+access_group_stock_manager_group_name,group_stock_manager.group_name,model_tech_gear_product_category,stock.group_stock_manager,1,1,1,1
+access_import_products_wizard_manager,import_products_wizard_manager,model_import_products_wizard,stock.group_stock_manager,1,1,1,1
