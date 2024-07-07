@@ -7,7 +7,7 @@
     'author': 'Jeton Stojku',
     'website': 'https://github.com/JetonStojku/odoo_project',
     'license': 'LGPL-3',
-    'depends': ['base', 'stock', 'base_import'],
+    'depends': ['base', 'stock'],
     "data": [
         "security/ir.model.access.csv",
         "views/product_category_views.xml",
